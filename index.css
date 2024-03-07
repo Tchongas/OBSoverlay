@@ -1,0 +1,87 @@
+body {
+    background-color: rgba(0, 0, 0, 0);;
+}
+
+p, h1, h2, span, div, a, label {
+    color: white;
+}
+
+p, span, div, a, label {
+    color: white;
+    font-size: x-large;
+}
+
+.hide {
+    position: fixed;
+    z-index: 99;
+    
+}
+
+#head {
+    position: fixed;
+}
+
+.Name {
+    position: fixed;
+    top: 150px;
+    left: 600px;
+    font-size: 200px;
+    text-shadow: 6px 6px 5px black;
+}
+
+.Pronouns {
+    position: fixed;
+    top: 350px;
+    left: 620px;
+    font-size: 80px;
+    text-shadow: 6px 6px 5px black;
+}
+
+
+.Version {
+    position: fixed;
+    top: 90px;
+    left: 620px;
+    font-size: 80px;
+    text-shadow: 6px 6px 5px black;
+}
+
+
+#delete {
+    background-color: rgb(255, 0, 0);
+    color: white    ;
+    font-weight: bolder;
+}
+#delete:hover {
+    background-color: rgb(255, 143, 143);
+}
+
+
+
+button, input[type="submit"] {
+    background-color: aliceblue;
+    border-radius: 3px;
+    border: none;
+    margin-inline: 4px;
+    margin-block: 4px;
+    padding: 6px;
+}
+button:active{
+    font-weight: bolder;
+}
+
+
+input[type="submit"] {
+    background-color: rgb(112, 255, 131);
+    padding-inline: 20px;
+}
+input[type="submit"]:hover {
+    background-color: rgb(164, 255, 177);090
+}
+
+
+input {
+    background-color: aliceblue;
+    border-radius: 3px;
+    margin-block: 2px;
+}
