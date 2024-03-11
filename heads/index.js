@@ -7,35 +7,35 @@ document.addEventListener("DOMContentLoaded", function() {
     
     const headsList = document.getElementById('headsList');
     
-    // Arrays to store heads and names
+    // SALVA OS ARRAYS PARA O STORAGE
     let headArray = [];
     let nameArray = [];
     let pronounsArray = [];
     let versionArray = [];
 
     submitButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault();
 
-        // Get the value from the "heads" and "names" inputs
+        
         const headValue = headsInput.value.trim();
         const nameValue = namesInput.value.trim();
         const pronounsValue = pronounsInput.value.trim();
         const versionValue = versionInput.value.trim();
 
-        // Check if the input is not empty
+        
         if (headValue !== '') {
-            // Push head and name to respective arrays
+            
             headArray.push(headValue);
             nameArray.push(nameValue);
             pronounsArray.push(pronounsValue);
             versionArray.push(versionValue);
 
-            // Update display
+            
             displayHeads();
         }
     });
 
-
+    //PEGA A CABECA E NOME ATUAL
     const currentHead = localStorage.getItem('currentHead');
         if (currentHead) {
             
@@ -62,10 +62,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         function displayHeads() {
-            // Clear previous list
             headsList.innerHTML = '';
         
-            // Populate list with heads and names
             for (let i = 0; i < headArray.length; i++) {
                 const listItem = document.createElement('button');
                 const breakline = document.createElement('br');
@@ -79,20 +77,20 @@ document.addEventListener("DOMContentLoaded", function() {
                 headsList.appendChild(breakline);
         
                 listItem.addEventListener('click', function() {
-                    // Update the displayed head
+                    //ATUALIZA O OVERLAY ATUAL
                     document.getElementById("head").src = `https://cravatar.eu/helmhead/${headArray[i]}/600.png`;
                     document.getElementById("name").textContent = `${nameArray[i]}`;
                     document.getElementById("pronounsHead").textContent = `${pronounsArray[i]}`;
                     document.getElementById("versionHead").textContent = `${versionArray[i]}`;
         
-                    // Save the currently displayed head to local storage
+                    //SALVA O OVERLAY ATUAL
                     localStorage.setItem('currentHead', headArray[i]);
                     localStorage.setItem('currentName', nameArray[i]);
                     localStorage.setItem('currentPronouns', pronounsArray[i]);
                     localStorage.setItem('currentVersion', versionArray[i]);
                 });
             }
-            // Save the headArray to local storage
+            //SALVA OS ARRAYS
             localStorage.setItem('headArray', JSON.stringify(headArray));
             localStorage.setItem('nameArray', JSON.stringify(nameArray));
             localStorage.setItem('pronounsArray', JSON.stringify(pronounsArray));
@@ -103,11 +101,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         let c = 0
         document.addEventListener('keydown', function(event) {
-            // Check which key was pressed
+            
             
             switch(event.key) {     
                 case '7':
-                    // Handle pressing the "p" key
                     c = c + 1
                     if(c > headArray.length - 1) c = c - 1
                     document.getElementById("head").src = `https://cravatar.eu/helmhead/${headArray[c]}/600.png`;
@@ -117,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     break;
 
                 case '6':
-                    // Handle pressing the "p" key
                     c = c - 1
                     if(c < 0) c = c + 1
                     document.getElementById("head").src = `https://cravatar.eu/helmhead/${headArray[c]}/600.png`;
@@ -127,11 +123,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     break;
 
                 case '0':
-                    // Handle pressing the "p" key
                     document.getElementById("hide").style = 'display: none';
                     break;
                 case '9':
-                    // Handle pressing the "p" key
+                    
                     document.getElementById("hide").style = 'display: visible';
                     break;
             }
@@ -139,28 +134,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         document.getElementById("delete").addEventListener("click", function() {
-            // Remove all local storage data
+            //DELETA OS ARRAYS
             localStorage.clear();
-            // Optionally, you can also update your page to reflect the removal of data
-            // For example, reset the displayed head
-            document.getElementById("head").src = ""; // Reset the displayed head
-            // You can also reset any other relevant data displayed on your page
+            document.getElementById("head").src = "";
         });
 
         const refreshButton = document.getElementById("refreshButton");
-
-            // Add event listener to the button
             refreshButton.addEventListener("click", function() {
-                // Refresh the page
                 location.reload();
             });
 
         
         const hideButton = document.getElementById("hideButton");
 
-            // Add event listener to the button
+            
             hideButton.addEventListener("click", function() {
-                // Refresh the page
                 document.getElementById("hide").style = 'display: none';
             });
         

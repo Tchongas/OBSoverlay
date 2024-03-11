@@ -1,0 +1,60 @@
+
+a {
+	text-decoration: none;
+}
+
+body {
+	background-color: #000000;
+	background-image: url("https://static.planetminecraft.com/files/resource_media/screenshot/1147/Void_872770.jpg");
+}
+
+.Title {
+	padding-top: 20px;
+	font-size: 4vw;
+	font-weight: bold;
+	text-align: center;
+	justify-self: center;
+	color: white;
+	margin-bottom: 20px;
+}
+
+.copy-btn {
+	line-height: 2.6vw;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.3vw;
+	width: 15vw;
+	height: 4vw;
+	border-radius: 6px;
+	background-color: #3d3b5a;
+	border: none;
+	color: aliceblue;
+	padding: 10px;
+	
+}
+.copy-btn:active {
+	line-height: 2.6vw;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.3vw;
+	width: 15vw;
+	height: 4vw;
+	border-radius: 6px;
+	background-color: #5c5985;
+	border: none;
+	color: aliceblue;
+	padding: 10px;
+	
+}
+
+.spacer {
+    width: 5vw;
+}
+
+.main-text {
+    padding-top: 10px;
+    font-size: 1.4vw;
+    text-align: center;
+    justify-self: center;
+	color: aliceblue;
+}

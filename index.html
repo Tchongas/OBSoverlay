@@ -4,25 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="indexMain.css">
     
     <title>Head Overlay</title>
 </head>
 <body style="background-color: black;">
-    <h1>Head Overlay</h1>
+    <div>
+        <h1 class="Title">OBS MCSR Head Overlay</h1>
+    </div>
     
-
-    <p>Copy this URL into a browser source in OBS:</p>
-    <a href="./heads/heads.html">https://tchongas.github.io/OBSoverlay/heads/heads.html</a>
-    <p>you wil need to change the resolutiion, mainly the height, set it to 700 or something</p>
-
-    <p>Use 0 to hide the overlay</p>
-    <p>Use 9 to show the overlay</p>
-    <p>Use 7 to go to the next head</p>
-    <p>Use 6 to go to the previous head</p>
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column main-text">
+            <p>Use <b>0</b> to hide the overlay and <b>9</b> to show the overlay</p>
+            <p></p>
+            <p>Use <b>7</b> to go to the next head and <b>6</b> to go to the previous</p>
+            <p></p>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column main-text">
+            <p>* Make sure to not check <b>"Refresh browser on scene load"</b> on the source in OBS</p>
+            <p>* You wil need to change the dimensions, mainly the height, set it to 700 or something</p>
+        </div>
+        
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column main-text">
+            <button onclick="copyURL()" id="copyBtn"class="copy-btn">Click to copy URL</button>
+            
+        </div>
+        
+    </div>
     
-    <p>Right click the source in OBS and interact with it with the buttons above, it saves between sessions</p>
-    <p>Make sure to not check "refresh browser on scene load" in OBS</p>
-
+   
+<script src="index.js"></script>
 </body>
 </html>
