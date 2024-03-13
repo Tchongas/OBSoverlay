@@ -32,6 +32,12 @@ body {
 	padding: 10px;
 	
 }
+
+.copy-btn:hover {
+	background-color: #474469;
+	color: aliceblue;
+	
+}
 .copy-btn:active {
 	line-height: 2.6vw;
 	text-align: center;
@@ -57,4 +63,12 @@ body {
     text-align: center;
     justify-self: center;
 	color: aliceblue;
+}
+
+.key {
+    color: white;
+    background-color: #353535;
+    border-radius: 6px;
+    padding-inline: 12px;
+    font-weight: bold;
 }
