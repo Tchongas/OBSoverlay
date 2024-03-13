@@ -30,6 +30,7 @@ body {
 	border: none;
 	color: aliceblue;
 	padding: 10px;
+	margin-bottom: 30px;
 	
 }
 
@@ -71,4 +72,26 @@ body {
     border-radius: 6px;
     padding-inline: 12px;
     font-weight: bold;
+}
+
+
+.Name {
+    font-size: 120px;
+    text-shadow: 6px 6px 5px black;
+	color: white;
+}
+
+.Pronouns {
+    margin-inline: 10px;
+    font-size: 60px;
+    text-shadow: 6px 6px 5px black;
+	color: white
+}
+
+
+.Version {
+	margin-inline: 10px;
+    font-size: 60px;
+    text-shadow: 6px 6px 5px black;
+	color: white
 }
